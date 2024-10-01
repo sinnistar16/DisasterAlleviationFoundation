@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj": {}
+    "c:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj": {
+    "c:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj",
+        "projectUniqueName": "c:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj",
         "projectName": "DisasterAlleviationFoundation",
-        "projectPath": "C:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj",
+        "projectPath": "c:\\Users\\ayask\\DisasterAlleviationFoundation\\DisasterAlleviationFoundation.csproj",
         "packagesPath": "C:\\Users\\ayask\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayask\\DisasterAlleviationFoundation\\obj\\",
+        "outputPath": "c:\\Users\\ayask\\DisasterAlleviationFoundation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ayask\\AppData\\Roaming\\NuGet\\NuGet.Config"

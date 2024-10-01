@@ -6,3 +6,4 @@ C:\Users\ayask\DisasterAlleviationFoundation\obj\Debug\net8.0\DisasterAlleviatio
 C:\Users\ayask\DisasterAlleviationFoundation\obj\Debug\net8.0\DisasterAlleviationFoundation.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ayask\DisasterAlleviationFoundation\obj\Debug\net8.0\DisasterAlleviationFoundation.RazorAssemblyInfo.cache
 C:\Users\ayask\DisasterAlleviationFoundation\obj\Debug\net8.0\DisasterAlleviationFoundation.RazorAssemblyInfo.cs
+c:\Users\ayask\DisasterAlleviationFoundation\obj\Debug\net8.0\DisasterAlleviationFoundation.sourcelink.json
