@@ -1,0 +1,23 @@
+@model DisasterAlleviationFoundation.Models.Volunteer
+
+<h2>Sign Up to Volunteer</h2>
+
+<form asp-action="SignUp" method="post">
+    <div>
+        <label for="FullName">Full Name</label>
+        <input asp-for="FullName" />
+    </div>
+    <div>
+        <label for="Email">Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label for="PhoneNumber">Phone Number</label>
+        <input asp-for="PhoneNumber" />
+    </div>
+    <div>
+        <label for="SkillSet">Skill Set</label>
+        <input asp-for="SkillSet" />
+    </div>
+    <button type="submit">Sign Up</button>
+</form>

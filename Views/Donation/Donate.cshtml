@@ -1,0 +1,23 @@
+@model DisasterAlleviationFoundation.Models.Donation
+
+<h2>Donate Resources</h2>
+
+<form asp-action="Donate" method="post">
+    <div>
+        <label for="ResourceType">Resource Type</label>
+        <input asp-for="ResourceType" />
+    </div>
+    <div>
+        <label for="Quantity">Quantity</label>
+        <input asp-for="Quantity" />
+    </div>
+    <div>
+        <label for="DonorName">Donor Name</label>
+        <input asp-for="DonorName" />
+    </div>
+    <div>
+        <label for="DonorContact">Donor Contact</label>
+        <input asp-for="DonorContact" />
+    </div>
+    <button type="submit">Donate</button>
+</form>

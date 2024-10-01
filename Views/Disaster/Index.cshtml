@@ -1,0 +1,25 @@
+@model IEnumerable<DisasterAlleviationFoundation.Models.Disaster>
+
+<h2>Disaster Reports</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var disaster in Model)
+        {
+            <tr>
+                <td>@disaster.DisasterType</td>
+                <td>@disaster.Location</td>
+                <td>@disaster.DateOccurred.ToShortDateString()</td>
+                <td>@disaster.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>

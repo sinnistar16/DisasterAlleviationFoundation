@@ -1,0 +1,25 @@
+@model IEnumerable<DisasterAlleviationFoundation.Models.Donation>
+
+<h2>Donations</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Resource Type</th>
+            <th>Quantity</th>
+            <th>Donor</th>
+            <th>Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var donation in Model)
+        {
+            <tr>
+                <td>@donation.ResourceType</td>
+                <td>@donation.Quantity</td>
+                <td>@donation.DonorName</td>
+                <td>@donation.DonorContact</td>
+            </tr>
+        }
+    </tbody>
+</table>

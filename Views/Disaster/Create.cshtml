@@ -1,0 +1,23 @@
+@model DisasterAlleviationFoundation.Models.Disaster
+
+<h2>Report a Disaster</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label for="DisasterType">Disaster Type</label>
+        <input asp-for="DisasterType" />
+    </div>
+    <div>
+        <label for="Location">Location</label>
+        <input asp-for="Location" />
+    </div>
+    <div>
+        <label for="DateOccurred">Date Occurred</label>
+        <input asp-for="DateOccurred" type="date" />
+    </div>
+    <div>
+        <label for="Description">Description</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <button type="submit">Submit Report</button>
+</form>
