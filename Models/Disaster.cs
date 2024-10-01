@@ -1,3 +1,5 @@
+namespace DisasterAlleviationFoundation.Model{
+
 using System.Diagnostics;
 
 
@@ -15,4 +17,5 @@ public class Disaster
     {
         return ToString();
     }
+}
 }
