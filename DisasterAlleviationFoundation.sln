@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisasterAlleviationFoundation", "DisasterAlleviationFoundation\DisasterAlleviationFoundation.csproj", "{214EF8E5-50D3-4F38-96EF-03DD7C28AD56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214EF8E5-50D3-4F38-96EF-03DD7C28AD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214EF8E5-50D3-4F38-96EF-03DD7C28AD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214EF8E5-50D3-4F38-96EF-03DD7C28AD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214EF8E5-50D3-4F38-96EF-03DD7C28AD56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

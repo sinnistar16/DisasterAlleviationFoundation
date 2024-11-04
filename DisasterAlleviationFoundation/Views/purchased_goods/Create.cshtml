@@ -1,0 +1,103 @@
+﻿@model DisasterAlleviationFoundation.Models.purchased_goods
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="flex_container_purchased_goods">
+    <div class="view_column_disaster_disasters">
+        <p>Total Amount Remaining: R @ViewBag.TotalAvailableFunds</p>
+    </div>
+</div>
+
+<button type="button" onclick="location.href='@Url.Action("Index")'" class="button_create_back">Back to List</button>
+
+<div class="form_column">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="item_name" class="control-label">Product Name</label>
+            <input asp-for="item_name" class="form-control" />
+            <span asp-validation-for="item_name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="item_description" class="control-label">Product Description</label>
+            <input asp-for="item_description" class="form-control" />
+            <span asp-validation-for="item_description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="item_category" class="control-label">Item Category</label>
+            <select asp-for="item_category" class="form-control">
+                <option value="">-- Select Category --</option>
+                @foreach (DisasterAlleviationFoundation.Models.purchased_goods.CategoryType category in Enum.GetValues(typeof(DisasterAlleviationFoundation.Models.purchased_goods.CategoryType)))
+                {
+                    var categoryText = GetCategoryDisplayName(category);
+                    <option value="@category">@categoryText</option>
+                }
+            </select>
+            <span asp-validation-for="item_category" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CustomCategoryName" class="control-label">Custom Category Name</label>
+            <input asp-for="CustomCategoryName" class="form-control" id="customCategoryNameInput" disabled />
+            <span asp-validation-for="CustomCategoryName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="number_of_items" class="control-label">Product Quantity (Number Of Items Purchased)</label>
+            <input asp-for="number_of_items" class="form-control" />
+            <span asp-validation-for="number_of_items" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="price" class="control-label">Price Per Item (Product Price)</label>
+            <input asp-for="price" class="form-control" />
+            <span asp-validation-for="price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="purchased_date" class="control-label">Product Purchase Date</label>
+            <input asp-for="purchased_date" class="form-control" />
+            <span asp-validation-for="purchased_date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="button_create" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+@functions {
+    public string GetCategoryDisplayName(DisasterAlleviationFoundation.Models.purchased_goods.CategoryType categoryType)
+    {
+        switch (categoryType)
+        {
+            case DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.Clothes:
+                return "Clothes";
+            case DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.NonPerishableFoods:
+                return "Non Perishable Foods";
+            case DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.Custom:
+                return "Custom";
+            default:
+                return categoryType.ToString();
+        }
+    }
+}
+
+<script>
+    // Add an event listener to the item_category select element
+    var itemCategorySelect = document.getElementById("item_category");
+    var customCategoryNameInput = document.getElementById("customCategoryNameInput");
+
+    itemCategorySelect.addEventListener("change", function () {
+        // Enable or disable the CustomCategoryName input based on the selected value
+        if (itemCategorySelect.value === "Custom") {
+            customCategoryNameInput.removeAttribute("disabled");
+        } else {
+            customCategoryNameInput.setAttribute("disabled", "disabled");
+        }
+    });
+</script>

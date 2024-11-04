@@ -1,0 +1,56 @@
+﻿@model DisasterAlleviationFoundation.Models.disasters
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<button type="button" onclick="location.href='@Url.Action("Index")'" class="button_create_back">Back to List</button>
+
+
+<h3>Are you sure you want to delete this disaster?</h3>
+<div class="delete-div">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4 category-text">
+            Added By User:
+        </dt>
+        <dd class="col-sm-5 category-text1">
+            @Html.DisplayFor(model => model.username)
+        </dd>
+        <dt class="col-sm-4 category-text">
+            Disaster Location:
+        </dt>
+        <dd class="col-sm-5 category-text1">
+            @Html.DisplayFor(model => model.disaster_location)
+        </dd>
+        <dt class="col-sm-4 category-text">
+            Disaster Description:
+        </dt>
+        <dd class="col-sm-5 category-text1">
+            @Html.DisplayFor(model => model.disaster_description)
+        </dd>
+        <dt class="col-sm-4 category-text">
+            Disaster Aid Type:
+        </dt>
+        <dd class="col-sm-5 category-text1">
+            @Html.DisplayFor(model => model.disaster_aid_type)
+        </dd>
+        <dt class="col-sm-4 category-text">
+            Disaster Start Date:
+        </dt>
+        <dd class="col-sm-5 category-text1">
+            @Html.DisplayFor(model => model.disaster_start_date)
+        </dd>
+        <dt class="col-sm-4 category-text">
+            Disaster End Date:
+        </dt>
+        <dd class="col-sm-5 category-text1">
+            @Html.DisplayFor(model => model.disaster_end_date)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="disaster_id" />
+        <input type="submit" value="Delete" class="btn btn-delete" />
+    </form>
+</div>

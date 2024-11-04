@@ -1,0 +1,362 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.hide-me {
+    display: none;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(50deg, #800080 36%, #FFA500 71%);
+}
+
+h4 {
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+h5 {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+h6 {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.category-text {
+    margin-top: 10px;
+    color: #FFA500;
+    text-align: center;
+}
+
+.category-text1 {
+    margin-top: 10px;
+    color: #FFA500;
+}
+
+p {
+    margin-top: 10px;
+    color: #800080;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.flex-container-disaster {
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.flex_container_assigned_content {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.flex_container_purchased_goods {
+    display: flex;
+    width: 100%;
+    margin-right: 200px;
+    margin-left: 325px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.view_column_assigned_goods {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    margin-right: -40px;
+    margin-left: -100px;
+}
+
+.view_column_assigned_money {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    margin-left: 240px;
+    margin-right: -250px;
+}
+
+.view_column_disaster_disasters {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    margin-right: 10px;
+}
+
+.flex-container_list {
+    margin-top: 100px;
+    display: flex;
+}
+
+.view_column_home_disasters {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    margin-right: 10px;
+}
+
+.view_column_home_monetary {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+}
+
+.view_column_home_goods {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    margin-right: 10px;
+}
+
+.view_column {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: -100px;
+    margin-left: -100px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.view_column_inventory {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: -100px;
+    margin-left: -100px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.delete-div {
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 225px;
+    margin-right: 225px;
+}
+
+.auth-column {
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 225px;
+    margin-right: 225px;
+    margin-top: 50px;
+    height: 370px;
+}
+
+.table th {
+    color: #800080;
+}
+
+.table td {
+    color: #FFA500;
+}
+
+ul {
+    color: #FFA500;
+}
+
+.confirm-registration {
+    background-color: white;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    margin-right: 440px;
+    margin-left: 440px;
+    border-radius: 10px;
+}
+
+.form_column {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-radius: 10px;
+}
+
+.form_column_edit {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.form-group {
+    padding: 15px;
+}
+
+.column_delete {
+    background-color: white;
+}
+
+.button {
+    background-color: #800080;
+    color: white;
+    font-size: 16px;
+    margin-left: -100px;
+    margin-top: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button-register {
+    background-color: #800080;
+    color: white;
+    font-size: 16px;
+    width: 25%;
+    margin-left: 325px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button_create {
+    background-color: #800080;
+    color: white;
+    font-size: 16px;
+    width: 25%;
+    margin-left: 325px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button_save {
+    background-color: #800080;
+    color: white;
+    font-size: 16px;
+    width: 25%;
+    margin-left: 325px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    font-size: 16px;
+    margin-right: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 350px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.button_create_back {
+    background-color: #800080;
+    color: white;
+    font-size: 16px;
+    margin-right: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #FFA500;
+}
+
+.button-register:hover {
+    background-color: #FFA500;
+}
+
+.button_create:hover {
+    background-color: #FFA500;
+}
+
+.button_create_back:hover {
+    background-color: #FFA500;
+}
+
+.img_d {
+    width: 40px;
+    height: 40px;
+}
+
+.img_g {
+    width: 40px;
+    height: 40px;
+}
+
+.img_m {
+    width: 40px;
+    height: 40px;
+}
+
+.img_c {
+    width: 40px;
+    height: 40px;
+}
+
+.img_deliver {
+    width: 60px;
+    height: 60px;
+}
+
+.form-check-input {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.register-new-user {
+    margin-right: 330px;
+    margin-left: 350px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+    .register-new-user:hover {
+        background-color: #FFA500;
+    }
+
+.confirm-registration:hover {
+    background-color: #FFA500;
+}

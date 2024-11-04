@@ -1,0 +1,75 @@
+﻿@model IEnumerable<DisasterAlleviationFoundation.Models.monetary>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="flex_container_assigned_content">
+    <div class="view_column_disaster_disasters">
+        <p>Total Amount Donated: R @ViewBag.TotalAmountDonated</p>
+    </div>
+
+
+    <div class="view_column_disaster_disasters">
+        <p>Total Amount of Expenses: R @ViewBag.TotalExpenses</p>
+    </div>
+
+    <div class="view_column_disaster_disasters">
+        <p>Total Amount Remaining: R @ViewBag.TotalAvailableFunds</p>
+    </div>
+
+</div>
+
+<button class="button" onclick="location.href='@Url.Action("Create")'">Add a new Monetary Donation</button>
+
+<div class="view_column">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Donation Added By
+                </th>
+                <th>
+                    Amount Donated
+                </th>
+                <th>
+                    Donation Date
+                </th>
+                <th>
+                    Donated By
+                </th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        R @Html.DisplayFor(modelItem => item.amount_donated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.donation_date)
+                    </td>
+                    <td>
+                        @if (item.is_anonymous == DisasterAlleviationFoundation.Models.monetary.AnonymousType.No)
+                        {
+                            @Html.DisplayFor(modelItem => item.donator)
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.monetary_id">
+                            <img src="~/edit-svgrepo-com.svg" alt="Edit" class="img_m" />
+                        </a> |
+                        <a asp-action="Delete" asp-route-id="@item.monetary_id">
+                            <img src="~/delete-svgrepo-com.svg" alt="Delete" class="img_m" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

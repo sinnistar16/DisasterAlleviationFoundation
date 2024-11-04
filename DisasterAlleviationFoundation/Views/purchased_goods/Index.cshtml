@@ -1,0 +1,99 @@
+﻿@model IEnumerable<DisasterAlleviationFoundation.Models.purchased_goods>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="flex_container_purchased_goods">
+    <div class="view_column_disaster_disasters">
+        <p>Total Goods Purchased: @ViewBag.ActivegoodsDonatedCount of Quantity @ViewBag.TotalGoodsPurchased</p>
+        @if (ViewBag.GoodsPurchased != null && ViewBag.GoodsPurchased.Count > 0)
+        {
+        }
+        else
+        {
+            <p>No Goods Purchased At The Moment.</p>
+        }
+    </div>
+</div>
+
+<button class="button" onclick="location.href='@Url.Action("Create")'">Add a new Purchased Good</button>
+
+<div class="view_column">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Item Name
+                </th>
+                <th>
+                    Item Description
+                </th>
+                <th>
+                    Item Category
+                </th>
+                <th>
+                    Number Of Items
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Purchase Date
+                </th>
+                <th>
+                    Options
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.item_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.item_description)
+                    </td>
+                    <td>
+                        @{
+                            switch (item.item_category)
+                            {
+                                case DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.Clothes:
+                                    @DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.Clothes
+                                    break;
+                                case DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.NonPerishableFoods:
+                                    @DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.NonPerishableFoods
+                                    break;
+                                case DisasterAlleviationFoundation.Models.purchased_goods.CategoryType.Custom:
+                                    @item.CustomCategoryName
+                                    break;
+                                default:
+                                    @item.item_category
+                                    break;
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.number_of_items)
+                    </td>
+                    <td>
+                        R @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.purchased_date)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.purchased_goods_id">
+                            <img src="~/edit-svgrepo-com.svg" alt="Edit" class="img_g" />
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.purchased_goods_id">
+                            <img src="~/delete-svgrepo-com.svg" alt="Delete" class="img_g" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

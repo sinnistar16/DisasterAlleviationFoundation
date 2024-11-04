@@ -1,0 +1,137 @@
+﻿@model IEnumerable<DisasterAlleviationFoundation.Models.disasters>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="flex-container-disaster">
+    <div class="view_column_disaster_disasters">
+    <p>Total Active Disasters: @ViewBag.ActiveDisasterCount</p>
+</div>
+
+
+    <div class="view_column_disaster_disasters">
+        <p>Total Pending Disasters: @ViewBag.PendingDisasterCount</p>
+    </div>
+
+    <div class="view_column_disaster_disasters">
+        <p>Total Concluded Disasters: @ViewBag.ConcludedDisasterCount</p>
+    </div>
+
+</div>
+
+<button class="button" onclick="location.href='@Url.Action("Create")'">Add a new Disaster</button>
+
+<div class="view_column">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Disaster Added By User
+                </th>
+                <th>
+                    Disaster Location
+                </th>
+                <th>
+                    Disaster Description
+                </th>
+                <th>
+                    Disaster Aid Type(s)
+                </th>
+                <th>
+                    Disaster Start Date
+                </th>
+                <th>
+                    Disaster End Date
+                </th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.disaster_location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.disaster_description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.disaster_aid_type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.disaster_start_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.disaster_end_date)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.disaster_id">
+                            <img src="~/edit-svgrepo-com.svg" alt="Edit" class="img_d" />
+                        </a> |
+                        <a asp-action="Delete" asp-route-id="@item.disaster_id">
+                            <img src="~/delete-svgrepo-com.svg" alt="Delete" class="img_d" />
+                        </a>
+                        <a asp-action="EditAssigningMoney" asp-route-id="@item.disaster_id">
+                            <img src="~/money-svgrepo-com.svg" alt="Edit" class="img_d" />
+                        </a>
+                        <a asp-action="EditAssigningGoods" asp-route-id="@item.disaster_id">
+                            <img src="~/deliver-goods-svgrepo-com (1).svg" alt="Edit" class="img_d" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="flex_container_assigned_content">
+    <div class="view_column_assigned_goods">
+        <p>Assigned Goods</p>
+        <hr />
+        <ul>
+            @if (ViewBag.AssignedGoods != null && ViewBag.AssignedGoods.Count > 0)
+            {
+                foreach (var disaster in ViewBag.AssignedGoods)
+                {
+                    <li>
+                        Disaster at Location: @disaster.disaster_location
+                        was assigned with @disaster.good_allocated_name of
+                        quantity: @disaster.good_allocated_number_of_items on
+                        @disaster.good_allocation_date.
+                    </li>
+                }
+            }
+            else
+            {
+                <li>No assigned goods at the moment.</li>
+            }
+        </ul>
+    </div>
+
+    <div class="view_column_assigned_money">
+        <p>Assigned Money</p>
+        <hr />
+        <ul>
+            @if (ViewBag.AssignedMoney != null && ViewBag.AssignedMoney.Count > 0)
+            {
+                foreach (var disaster in ViewBag.AssignedMoney)
+                {
+                    <li>
+                        Disaster at Location: @disaster.disaster_location
+                        was assigned with R @disaster.money_allocated_amount on
+                        @disaster.money_allocated_date.
+                    </li>
+                }
+            }
+            else
+            {
+                <li>No assigned money at the moment.</li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h5>
+    Welcome to the Disaster Alleviation Foundation, where compassion meets action.
+    At our core, we are driven by a shared mission: to provide swift and effective relief to those
+    affected by disasters, both natural and man-made. With a dedicated team of volunteers and generous
+    supporters, we stand as a beacon of hope during challenging times. Explore our initiatives, get involved,
+    and join us in making a positive impact on communities in need. Together, we can build a safer and more
+    resilient world.
+</h5>
+
+<div class="view_column">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <p>Total Active Disasters: @ViewBag.ActiveDisasterCount</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>
+                    <ul>
+                        @if (ViewBag.activeDisasters != null && ViewBag.ActiveDisasters.Count > 0 && ViewBag.AssignedGoods != null &&
+                        ViewBag.AssignedGoods.Count <= 0 && ViewBag.AssignedMoney != null && ViewBag.AssignedMoney.Count <= 0)
+                        {
+                            @foreach (var disaster in ViewBag.activeDisasters)
+                            {
+                                if (DateTime.Now >= disaster.disaster_start_date && DateTime.Now <= disaster.disaster_end_date)
+                                {
+                                    <li>
+                                        Location: @disaster.disaster_location |
+                                        End date: @disaster.disaster_end_date.ToString("dd MMMM yy")
+                                    </li>
+                                }
+                            }
+                        }
+                        else if (ViewBag.activeDisasters != null && ViewBag.ActiveDisasters.Count > 0 && ViewBag.AssignedGoods != null &&
+                        ViewBag.AssignedGoods.Count > 0 && ViewBag.AssignedMoney != null && ViewBag.AssignedMoney.Count <= 0)
+                        {
+                            @foreach (var disaster in ViewBag.activeDisasters)
+                            {
+                                if (DateTime.Now >= disaster.disaster_start_date && DateTime.Now <= disaster.disaster_end_date)
+                                {
+                                    <li>
+                                        Location: @disaster.disaster_location |
+                                        End date: @disaster.disaster_end_date.ToString("dd MMMM yy") |
+                                        Assigned Good(s): @disaster.good_allocated_name |
+                                        Quantity: @disaster.good_allocated_number_of_items
+                                     </li>
+                                }
+                            }
+                        }
+                        else if (ViewBag.activeDisasters != null && ViewBag.ActiveDisasters.Count > 0 && ViewBag.AssignedGoods != null &&
+                        ViewBag.AssignedGoods.Count <= 0 && ViewBag.AssignedMoney != null && ViewBag.AssignedMoney.Count > 0)
+                        {
+                            @foreach (var disaster in ViewBag.activeDisasters)
+                            {
+                                if (DateTime.Now >= disaster.disaster_start_date && DateTime.Now <= disaster.disaster_end_date)
+                                {
+                                    <li>
+                                        Location: @disaster.disaster_location |
+                                        End date: @disaster.disaster_end_date.ToString("dd MMMM yy") |
+                                        Assigned Money: R @disaster.money_allocated_amount
+                                    </li>
+                                }
+                            }
+                        }
+                        else if (ViewBag.activeDisasters != null && ViewBag.ActiveDisasters.Count > 0 && ViewBag.AssignedGoods != null &&
+                        ViewBag.AssignedGoods.Count > 0 && ViewBag.AssignedMoney != null && ViewBag.AssignedMoney.Count > 0)
+                        {
+                            @foreach (var disaster in ViewBag.activeDisasters)
+                            {
+                                if (DateTime.Now >= disaster.disaster_start_date && DateTime.Now <= disaster.disaster_end_date)
+                                {
+                                    <li>
+                                        Location: @disaster.disaster_location |
+                                        End date: @disaster.disaster_end_date.ToString("dd MMMM yy") |
+                                        Assigned Good(s): @disaster.good_allocated_name |
+                                        Quantity: @disaster.good_allocated_number_of_items | AND |
+                                        Assigned Money: R @disaster.money_allocated_amount
+                                    </li>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <li>No Active disasters at the moment.</li>
+                        }
+                    </ul>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="flex-container">
+    <div class="view_column_assigned_goods">
+        <p>Total Goods Donated: @ViewBag.ActivegoodsDonatedCount | Of Quantity: @ViewBag.ActivegoodsDonatedQuantity</p>
+        <hr />
+        <ul>
+            @if (ViewBag.GoodsDonated != null && ViewBag.GoodsDonated.Count > 0)
+            {
+                @foreach (var item in ViewBag.GoodsDonated)
+                {
+                    <li>
+                        Donated Good(s): @item.item_name, of Quantity: @item.number_of_items, Donated On: @item.donation_date.ToString("dd MMMM yy")
+                    </li>
+                }
+            }
+            else
+            {
+                <li>No goods donated at the moment.</li>
+            }
+        </ul>
+    </div>
+
+    <div class="view_column_assigned_money">
+        <p>Total Amount Donated: R @ViewBag.TotalAmountDonated</p>
+        <hr />
+        <ul>
+            @if (ViewBag.MonetaryDonations != null && ViewBag.MonetaryDonations.Count > 0)
+            {
+                @foreach (var amount in ViewBag.MonetaryDonations)
+                {
+                    <li>Amount: R @amount.amount_donated was donated on @amount.donation_date.ToString("dd MMMM yy")</li>
+                }
+            }
+            else
+            {
+                <li>No money donated at the moment.</li>
+            }
+        </ul>
+    </div>
+</div>

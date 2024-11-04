@@ -1,0 +1,100 @@
+﻿@model IEnumerable<DisasterAlleviationFoundation.Models.good_donations>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="flex_container_purchased_goods">
+    <div class="view_column_disaster_disasters">
+        <p>Total Goods Donated: @ViewBag.ActivegoodsDonatedCount | Of Quantity: @ViewBag.ActivegoodsDonatedQuantity</p>
+    </div>
+</div>
+
+<button class="button" onclick="location.href='@Url.Action("Create")'">Add a new Goods Donation</button>
+
+<div class="view_column">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Goods Added By User
+                </th>
+                <th>
+                    Item Name
+                </th>
+                <th>
+                    Item Description
+                </th>
+                <th>
+                    Item Category
+                </th>
+                <th>
+                    Number Of Items
+                </th>
+                <th>
+                    Donation Date
+                </th>
+                <th>
+                    Donated By
+                </th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.item_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.item_description)
+                    </td>
+                    <td>
+                        @{
+                            switch (item.item_category)
+                            {
+                                case DisasterAlleviationFoundation.Models.good_donations.CategoryType.Clothes:
+                                    @DisasterAlleviationFoundation.Models.good_donations.CategoryType.Clothes
+                                    break;
+                                case DisasterAlleviationFoundation.Models.good_donations.CategoryType.NonPerishableFoods:
+                                    @DisasterAlleviationFoundation.Models.good_donations.CategoryType.NonPerishableFoods
+                                    break;
+                                case DisasterAlleviationFoundation.Models.good_donations.CategoryType.Custom:
+                                    @item.CustomCategoryName
+                                    break;
+                                default:
+                                    @item.item_category
+                                    break;
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.number_of_items)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.donation_date)
+                    </td>
+                    <td>
+                        @if (item.is_anonymous == DisasterAlleviationFoundation.Models.good_donations.AnonymousType.No)
+                        {
+                            @Html.DisplayFor(modelItem => item.donator)
+                        }
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.good_donations_id">
+                            <img src="~/edit-svgrepo-com.svg" alt="Edit" class="img_g" />
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.good_donations_id">
+                            <img src="~/delete-svgrepo-com.svg" alt="Delete" class="img_g" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

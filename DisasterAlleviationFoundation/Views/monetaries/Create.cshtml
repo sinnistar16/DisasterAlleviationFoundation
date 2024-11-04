@@ -1,0 +1,65 @@
+﻿@model DisasterAlleviationFoundation.Models.monetary
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<button type="button" onclick="location.href='@Url.Action("Index")'" class="button_create_back">Back to List</button>
+
+
+<div class="form_column">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="amount_donated" class="control-label">Amount Donated</label>
+            <input asp-for="amount_donated" class="form-control" />
+            <span asp-validation-for="amount_donated" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="donation_date" class="control-label">Donation Date</label>
+            <input asp-for="donation_date" class="form-control" />
+            <span asp-validation-for="donation_date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="is_anonymous" class="control-label">Does The User Want To Remain Anonymous?</label>
+            <select asp-for="is_anonymous" class="form-control">
+                <option value="">-- Select Option --</option>
+                @foreach (DisasterAlleviationFoundation.Models.good_donations.AnonymousType type in Enum.GetValues(typeof(DisasterAlleviationFoundation.Models.good_donations.AnonymousType)))
+                {
+                    <option value="@type">@type</option>
+                }
+            </select>
+            <span asp-validation-for="is_anonymous" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="donator" class="control-label">Donator Name</label>
+            <input asp-for="donator" class="form-control" id="donatorInput" disabled />
+            <span asp-validation-for="donator" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="button_create" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script>
+    // Add an event listener to the is_anonymous select element
+    var isAnonymousSelect = document.getElementById("is_anonymous");
+    var donatorInput = document.getElementById("donatorInput");
+
+    isAnonymousSelect.addEventListener("change", function () {
+        // Enable or disable the donator input based on the selected value
+        if (isAnonymousSelect.value === "No") {
+            donatorInput.removeAttribute("disabled");
+        } else {
+            donatorInput.setAttribute("disabled", "disabled");
+        }
+    });
+</script>

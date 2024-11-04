@@ -1,0 +1,183 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DisasterAlleviationFoundation
+build_property.RootNamespace = DisasterAlleviationFoundation
+build_property.ProjectDir = c:\Users\ayask\Desktop\DisasterAlleviationFoundation\DisasterAlleviationFoundation\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\ayask\Desktop\DisasterAlleviationFoundation\DisasterAlleviationFoundation
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/EditAssigningGoods.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXEVkaXRBc3NpZ25pbmdHb29kcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/EditAssigningMoney.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXEVkaXRBc3NpZ25pbmdNb25leS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/disasters/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlzYXN0ZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/good_donations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZ29vZF9kb25hdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/good_donations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZ29vZF9kb25hdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/good_donations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZ29vZF9kb25hdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/good_donations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZ29vZF9kb25hdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/good_donations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZ29vZF9kb25hdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Inventory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/monetaries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbW9uZXRhcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/monetaries/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbW9uZXRhcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/monetaries/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbW9uZXRhcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/monetaries/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbW9uZXRhcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/monetaries/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbW9uZXRhcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/purchased_goods/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHVyY2hhc2VkX2dvb2RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/purchased_goods/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHVyY2hhc2VkX2dvb2RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/purchased_goods/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHVyY2hhc2VkX2dvb2RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/purchased_goods/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHVyY2hhc2VkX2dvb2RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/purchased_goods/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHVyY2hhc2VkX2dvb2RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ayask/Desktop/DisasterAlleviationFoundation/DisasterAlleviationFoundation/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-rpqy4dws8u

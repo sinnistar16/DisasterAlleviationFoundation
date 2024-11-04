@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Inventory Page";
+}
+
+<div class="view_column">
+    <p>Total Goods Donated: @ViewBag.ActivegoodsDonatedCount | Of Quantity: @ViewBag.ActivegoodsDonatedQuantity</p>
+    <hr />
+    <ul>
+        @foreach (var item in ViewBag.GoodsDonated)
+        {
+            <li>
+                Good Name: @item.item_name | Quantity: @item.number_of_items | From Goods Donated
+            </li>
+        }
+        @foreach (var item in ViewBag.GoodsPurchased)
+        {
+            <li>
+                Good Name: @item.item_name | Quantity: @item.number_of_items | From Goods Purchased
+            </li>
+        }
+    </ul>
+</div>

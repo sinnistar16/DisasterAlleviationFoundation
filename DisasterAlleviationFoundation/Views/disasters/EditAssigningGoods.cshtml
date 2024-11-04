@@ -1,0 +1,131 @@
+﻿@model DisasterAlleviationFoundation.Models.disasters
+
+@{
+    ViewData["Title"] = "EditAssigningGoods";
+}
+
+<button type="button" onclick="location.href='@Url.Action("Index")'" class="button_create_back">Back to List</button>
+
+
+<div class="form_column_edit">
+    <form asp-action="EditAssigningGoods">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="disaster_id" />
+        <div class="form-group hide-me">
+            <label asp-for="disaster_location" class="control-label">Disaster Location</label>
+            <input asp-for="disaster_location" class="form-control" />
+            <span asp-validation-for="disaster_location" class="text-danger"></span>
+        </div>
+        <div class="form-group hide-me">
+            <label asp-for="disaster_description" class="control-label">Disaster Description</label>
+            <input asp-for="disaster_description" class="form-control" />
+            <span asp-validation-for="disaster_description" class="text-danger"></span>
+        </div>
+        <div class="form-group hide-me">
+            <label asp-for="disaster_aid_type" class="control-label">Disaster Aid Type</label>
+            <input asp-for="disaster_aid_type" class="form-control" />
+            <span asp-validation-for="disaster_aid_type" class="text-danger"></span>
+        </div>
+        <div class="form-group hide-me">
+            <label asp-for="disaster_start_date" class="control-label">Disaster Start Date</label>
+            <input asp-for="disaster_start_date" class="form-control" />
+            <span asp-validation-for="disaster_start_date" class="text-danger"></span>
+        </div>
+        <div class="form-group hide-me">
+            <label asp-for="disaster_end_date" class="control-label">Disaster End Date</label>
+            <input asp-for="disaster_end_date" class="form-control" />
+            <span asp-validation-for="disaster_end_date" class="text-danger"></span>
+        </div>
+        <div class="form-group hide-me">
+            <label asp-for="money_allocated_amount" class="control-label">Amount To Allocate</label>
+            <input asp-for="money_allocated_amount" class="form-control" />
+            <span asp-validation-for="money_allocated_amount" class="text-danger"></span>
+        </div>
+        <div class="form-group hide-me">
+            <label asp-for="money_allocated_date" class="control-label">Date Of Allocation</label>
+            <input asp-for="money_allocated_date" class="form-control" />
+            <span asp-validation-for="money_allocated_date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="good_allocated_name" class="control-label">Good Name</label>
+            <select asp-for="good_allocated_name" class="form-control" id="goodNameSelect">
+                <option value="">Select a Good Name</option>
+                @foreach (var item in ViewBag.GoodNames)
+                {
+                    <option value="@item">@item</option>
+                }
+            </select>
+            <span asp-validation-for="good_allocated_name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="good_allocated_number_of_items" class="control-label">Good Quantity</label>
+            <input asp-for="good_allocated_number_of_items" class="form-control" id="goodQuantityInput" />
+            <span asp-validation-for="good_allocated_number_of_items" class="text-danger"></span>
+            <span class="text-info" id="maxQuantityInfo"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="good_allocation_date" class="control-label">Date Of Allocation</label>
+            <input asp-for="good_allocation_date" class="form-control" />
+            <span asp-validation-for="good_allocation_date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="button_save" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Get references to the elements
+        var goodNameSelect = document.getElementById("goodNameSelect");
+        var goodQuantityInput = document.getElementById("goodQuantityInput");
+        var maxQuantityInfo = document.getElementById("maxQuantityInfo");
+
+        // Define a dictionary to store the maximum quantities for each item
+        var maxQuantities = @Html.Raw(Json.Serialize(ViewBag.MaxQuantities));
+
+        // Update the maximum quantity when the Good Name dropdown changes
+        goodNameSelect.onchange = function () {
+            var selectedGood = goodNameSelect.value;
+            var maxQuantity = maxQuantities[selectedGood] || 0;
+            maxQuantityInfo.innerText = "Max: " + maxQuantity;
+            goodQuantityInput.max = maxQuantity;
+        };
+
+        // Add an input event handler to validate the Good Quantity
+        goodQuantityInput.addEventListener("input", function () {
+            var selectedGood = goodNameSelect.value;
+            var maxQuantity = maxQuantities[selectedGood] || 0;
+            var inputQuantity = parseInt(goodQuantityInput.value);
+            
+            if (inputQuantity > maxQuantity) {
+                goodQuantityInput.setCustomValidity("Quantity exceeds the available items.");
+            } else {
+                goodQuantityInput.setCustomValidity("");
+            }
+        });
+
+        // Fetch the maximum quantities for items from both goods donations and purchased goods
+        // Combine the data into the maxQuantities dictionary
+        fetch("/disasters/GetMaxQuantities")  // Adjust the URL to your actual route
+            .then(response => response.json())
+            .then(data => {
+                maxQuantities = { ...maxQuantities, ...data };
+
+                // Update the maximum quantity when the Good Name dropdown changes
+                goodNameSelect.onchange = function () {
+                    var selectedGood = goodNameSelect.value;
+                    var maxQuantity = maxQuantities[selectedGood] || 0;
+                    maxQuantityInfo.innerText = "Max: " + maxQuantity;
+                    goodQuantityInput.max = maxQuantity;
+                };
+            })
+            .catch(error => {
+                console.error("Error fetching maximum quantities: " + error);
+            });
+    </script>
+    }
